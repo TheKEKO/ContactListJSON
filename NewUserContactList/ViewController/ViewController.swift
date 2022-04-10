@@ -45,7 +45,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let indexPath = tableView.indexPathForSelectedRow {
             guard let detailVC = segue.destination as? PersonListDetailsViewController else { return }
-            detailVC.pesonInfo = persons[indexPath.row]
+            detailVC.personInfo = persons[indexPath.row]
         }
     }
 }

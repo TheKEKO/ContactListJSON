@@ -19,3 +19,8 @@ struct Person:Decodable {
     }
 }
 
+enum Contacts: String {
+    case phone = "phone"
+    case email = "tray"
+}
+

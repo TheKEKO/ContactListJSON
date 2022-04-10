@@ -3,6 +3,7 @@
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gvR-lf-mrT">
-                                <rect key="frame" x="0.0" y="91" width="320" height="477"/>
+                                <rect key="frame" x="0.0" y="91" width="320" height="428"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -30,6 +31,7 @@
                             <constraint firstItem="gvR-lf-mrT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wQF-LO-KGs"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Contact List" image="tray.full.fill" catalog="system" selectedImage="person.crop.rectangle.fill" id="5AL-O4-mX5"/>
                     <navigationItem key="navigationItem" title="Contact List" id="N5F-Ws-Ynp"/>
                     <connections>
                         <outlet property="tableView" destination="gvR-lf-mrT" id="4Gr-0k-4H1"/>
@@ -38,7 +40,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="812" y="83"/>
+            <point key="canvasLocation" x="1809.375" y="82.394366197183103"/>
         </scene>
         <!--Person List Details View Controller-->
         <scene sceneID="gft-Wt-R3d">
@@ -112,7 +114,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fJr-Ma-3ek" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1629" y="81"/>
+            <point key="canvasLocation" x="2661" y="82"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NoB-kL-gOY">
@@ -125,16 +127,76 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="P4e-dE-Kkf"/>
+                        <segue destination="3Pa-gd-4R7" kind="relationship" relationship="rootViewController" id="P4e-dE-Kkf"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="czs-Vz-1hh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18.75" y="83.450704225352112"/>
+            <point key="canvasLocation" x="-71" y="411"/>
+        </scene>
+        <!--Persons List-->
+        <scene sceneID="i24-d5-Pun">
+            <objects>
+                <tableViewController id="6RY-zN-ehm" customClass="PersonDetailedViewController" customModule="NewUserContactList" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="UiV-Bt-FeT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="tintColor" name="AccentColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" id="GUC-PI-KRT">
+                                <rect key="frame" x="0.0" y="44.5" width="320" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GUC-PI-KRT" id="WjA-gs-mGV">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <color key="tintColor" systemColor="linkColor"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="6RY-zN-ehm" id="i1O-gs-8sV"/>
+                            <outlet property="delegate" destination="6RY-zN-ehm" id="Z9I-IP-Fef"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Full Info" image="tray.full.fill" catalog="system" id="wIm-jm-0Ay"/>
+                    <navigationItem key="navigationItem" title="Persons List" id="WQe-Yw-IEC"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Q7-qq-18I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1809" y="782"/>
+        </scene>
+        <!--Contact List-->
+        <scene sceneID="63a-uv-RFt">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="3Pa-gd-4R7" customClass="TabBarViewController" customModule="NewUserContactList" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Contact List" id="BnL-cP-Jlm"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Frp-ut-aAD">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="UXB-Au-BNS"/>
+                        <segue destination="6RY-zN-ehm" kind="relationship" relationship="viewControllers" id="zck-Q4-33H"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P8m-1c-01g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="816" y="411"/>
         </scene>
     </scenes>
     <resources>
         <image name="person" catalog="system" width="128" height="117"/>
+        <image name="person.crop.rectangle.fill" catalog="system" width="128" height="93"/>
+        <image name="tray.full.fill" catalog="system" width="128" height="88"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

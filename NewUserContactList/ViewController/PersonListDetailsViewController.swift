@@ -22,7 +22,7 @@ class PersonListDetailsViewController: UIViewController {
         title = pesonInfo.name
         name.text = "Name: \(pesonInfo.name)"
         username.text = "Username: \(pesonInfo.username)"
-        email.text = "Email: \(pesonInfo.email)"
-        phone.text = "Phone: \(pesonInfo.phone)"
+        email.text = " ✉️ : \(pesonInfo.email)"
+        phone.text = " 📞 : \(pesonInfo.phone)"
     }
 }

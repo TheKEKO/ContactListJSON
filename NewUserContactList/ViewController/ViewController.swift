@@ -9,12 +9,9 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    
     @IBOutlet weak var tableView: UITableView!
     
-    var persons = [Person]()
-    
-    {
+    var persons = [Person]() {
         didSet {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
@@ -46,9 +43,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? PersonListDetailsViewController {
-            destination.pesonInfo = persons[tableView.indexPathForSelectedRow!.row]
+        if let indexPath = tableView.indexPathForSelectedRow {
+            guard let detailVC = segue.destination as? PersonListDetailsViewController else { return }
+            detailVC.pesonInfo = persons[indexPath.row]
         }
     }
 }
+
 

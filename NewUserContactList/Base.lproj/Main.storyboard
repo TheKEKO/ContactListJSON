@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1Me-IZ-oes">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,11 +13,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NewUserContactList" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gvR-lf-mrT">
-                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
+                                <rect key="frame" x="0.0" y="91" width="320" height="477"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -38,18 +38,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="810" y="83"/>
+            <point key="canvasLocation" x="812" y="83"/>
         </scene>
         <!--Person List Details View Controller-->
         <scene sceneID="gft-Wt-R3d">
             <objects>
                 <viewController id="7fm-pr-Fwu" customClass="PersonListDetailsViewController" customModule="NewUserContactList" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9j4-T3-I8G">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="wvm-Wn-3Nd">
-                                <rect key="frame" x="67" y="396.5" width="280" height="103"/>
+                                <rect key="frame" x="20" y="293" width="280" height="103"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wCA-KY-BGk">
                                         <rect key="frame" x="0.0" y="0.0" width="280" height="20.5"/>
@@ -76,16 +76,24 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="280" id="a99-Ue-i6u"/>
-                                </constraints>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="KjT-mx-yQB">
+                                <rect key="frame" x="85" y="117.5" width="150" height="147.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="KT1-Ya-fVW"/>
+                                    <constraint firstAttribute="width" constant="150" id="QaE-Bt-hn7"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2CF-ie-nka"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="wvm-Wn-3Nd" firstAttribute="centerY" secondItem="9j4-T3-I8G" secondAttribute="centerY" id="vhL-uu-Jbh"/>
-                            <constraint firstItem="wvm-Wn-3Nd" firstAttribute="centerX" secondItem="9j4-T3-I8G" secondAttribute="centerX" id="xxf-K9-1qG"/>
+                            <constraint firstItem="2CF-ie-nka" firstAttribute="top" secondItem="KjT-mx-yQB" secondAttribute="top" constant="-25" id="0cS-PW-07e"/>
+                            <constraint firstItem="wvm-Wn-3Nd" firstAttribute="leading" secondItem="2CF-ie-nka" secondAttribute="leading" constant="20" id="FiD-8X-lvy"/>
+                            <constraint firstItem="wvm-Wn-3Nd" firstAttribute="centerX" secondItem="9j4-T3-I8G" secondAttribute="centerX" id="Y0h-RO-iRP"/>
+                            <constraint firstItem="2CF-ie-nka" firstAttribute="trailing" secondItem="wvm-Wn-3Nd" secondAttribute="trailing" constant="20" id="auq-xQ-5Ok"/>
+                            <constraint firstItem="KjT-mx-yQB" firstAttribute="centerX" secondItem="9j4-T3-I8G" secondAttribute="centerX" id="jXc-St-7cK"/>
+                            <constraint firstItem="wvm-Wn-3Nd" firstAttribute="top" secondItem="KjT-mx-yQB" secondAttribute="bottom" constant="27" id="mjK-p9-4QC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7zD-m4-C92"/>
@@ -98,7 +106,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fJr-Ma-3ek" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1571" y="83"/>
+            <point key="canvasLocation" x="1629" y="81"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NoB-kL-gOY">
@@ -106,7 +114,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1Me-IZ-oes" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="l0A-0f-mgT">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="91"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -120,6 +128,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="person" catalog="system" width="128" height="117"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

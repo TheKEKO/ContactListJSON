@@ -1,0 +1,34 @@
+//
+//  NetworkManager.swift
+//  NewUserContactList
+//
+//  Created by Aleksandr F. on 10.04.2022.
+//
+
+import Foundation
+
+class NetworkManager {
+    
+    static let shared = NetworkManager()
+    
+    func downloadJSON(completed: @escaping ([Person]) -> ()) {
+        guard let url = URL(string: "https://jsonplaceholder.typicode.com/users") else { return }
+        
+        URLSession.shared.dataTask(with: url) { data, _, error in
+            
+            guard let data = data else {
+                print(error?.localizedDescription ?? "No error description")
+                return
+            }
+            do {
+                let persons = try JSONDecoder().decode([Person].self, from: data)
+                
+                completed(persons)
+                
+            } catch let error {
+                print(error.localizedDescription)
+            }
+        }
+        .resume()
+    }
+}

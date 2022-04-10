@@ -62,14 +62,12 @@
 		D4565CCE2802F43000C4DFC4 /* NewUserContactList */ = {
 			isa = PBXGroup;
 			children = (
-				D4565CCF2802F43000C4DFC4 /* AppDelegate.swift */,
-				D4565CD12802F43000C4DFC4 /* SceneDelegate.swift */,
+				D4565CE62802F76A00C4DFC4 /* Models */,
 				D4565CE52802F61C00C4DFC4 /* ViewController */,
 				D4E2D2C928033C840068A83C /* Services */,
-				D4565CD52802F43000C4DFC4 /* Main.storyboard */,
-				D4565CD82802F43100C4DFC4 /* Assets.xcassets */,
-				D4565CDA2802F43100C4DFC4 /* LaunchScreen.storyboard */,
-				D4565CDD2802F43100C4DFC4 /* Info.plist */,
+				D4E2D2CA28037B3E0068A83C /* Storyboards */,
+				D4E2D2CB28037B4A0068A83C /* Resources */,
+				D4E2D2CC28037B520068A83C /* App */,
 			);
 			path = NewUserContactList;
 			sourceTree = "<group>";
@@ -79,7 +77,6 @@
 			children = (
 				D4565CE32802F61100C4DFC4 /* PersonListDetailsViewController.swift */,
 				D4565CD32802F43000C4DFC4 /* ViewController.swift */,
-				D4565CE62802F76A00C4DFC4 /* Models */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -98,6 +95,33 @@
 				D4E2D2C728033C710068A83C /* NetworkManager.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		D4E2D2CA28037B3E0068A83C /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				D4565CD52802F43000C4DFC4 /* Main.storyboard */,
+				D4565CDA2802F43100C4DFC4 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		D4E2D2CB28037B4A0068A83C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D4565CD82802F43100C4DFC4 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D4E2D2CC28037B520068A83C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				D4565CCF2802F43000C4DFC4 /* AppDelegate.swift */,
+				D4565CD12802F43000C4DFC4 /* SceneDelegate.swift */,
+				D4565CDD2802F43100C4DFC4 /* Info.plist */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -325,7 +349,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VWJHPQLGW8;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = NewUserContactList/Info.plist;
+				INFOPLIST_FILE = NewUserContactList/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -353,7 +377,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VWJHPQLGW8;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = NewUserContactList/Info.plist;
+				INFOPLIST_FILE = NewUserContactList/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

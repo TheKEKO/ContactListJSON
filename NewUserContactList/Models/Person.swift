@@ -12,6 +12,7 @@ struct Person:Decodable {
     let username: String
     let email: String
     let phone: String
+    var website: String
     
     var fullName: String {
         "\(name) \(username)"

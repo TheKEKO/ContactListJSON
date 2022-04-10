@@ -13,6 +13,7 @@ class PersonListDetailsViewController: UIViewController {
     @IBOutlet weak var username: UILabel!
     @IBOutlet weak var email: UILabel!
     @IBOutlet weak var phone: UILabel!
+    @IBOutlet weak var website: UILabel!
     
     var pesonInfo:Person!
     
@@ -20,9 +21,10 @@ class PersonListDetailsViewController: UIViewController {
         super.viewDidLoad()
         
         title = pesonInfo.name
-        name.text = "Name: \(pesonInfo.name)"
-        username.text = "Username: \(pesonInfo.username)"
+        name.text = " ➤  Name: \(pesonInfo.name)"
+        username.text = " ➤  User name: \(pesonInfo.username)"
         email.text = " ✉️ : \(pesonInfo.email)"
         phone.text = " 📞 : \(pesonInfo.phone)"
+        website.text = " 🖥 : \(pesonInfo.website)"
     }
 }

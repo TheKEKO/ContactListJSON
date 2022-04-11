@@ -20,7 +20,7 @@ class PersonDetailedViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         NetworkManager.shared.downloadJSON { person in
-            self.persons += person
+            self.persons = person
         }
     }
     

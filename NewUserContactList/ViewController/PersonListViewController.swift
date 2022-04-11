@@ -12,6 +12,8 @@ class PersonListViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet weak var tableView: UITableView!
     
     var persons = [Person]() {
+       
+        
         didSet {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
@@ -24,7 +26,7 @@ class PersonListViewController: UIViewController, UITableViewDelegate, UITableVi
         tableView.delegate = self
         tableView.dataSource = self
         NetworkManager.shared.downloadJSON { person in
-            self.persons += person
+            self.persons = person
         }
     }
     

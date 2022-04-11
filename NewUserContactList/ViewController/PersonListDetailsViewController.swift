@@ -21,10 +21,11 @@ class PersonListDetailsViewController: UIViewController {
         super.viewDidLoad()
         
         title = personInfo.name
-        name.text = " ➤  Name: \(personInfo.name)"
-        username.text = " ➤  User name: \(personInfo.username)"
+        name.text = "  ➤  Name: \(personInfo.name)"
+        username.text = "  ➤  User name: \(personInfo.username)"
         email.text = " ✉️ : \(personInfo.email)"
         phone.text = " 📞 : \(personInfo.phone)"
         website.text = " 🖥 : \(personInfo.website)"
     }
 }
+

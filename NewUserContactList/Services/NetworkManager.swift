@@ -11,6 +11,8 @@ class NetworkManager {
     
     static let shared = NetworkManager()
     
+    private init() {}
+    
     func downloadJSON(completed: @escaping ([Person]) -> ()) {
         guard let url = URL(string: "https://jsonplaceholder.typicode.com/users") else { return }
         
@@ -26,7 +28,7 @@ class NetworkManager {
                 completed(persons)
                 
             } catch let error {
-                print(error.localizedDescription)
+                print(error)
             }
         }
         .resume()

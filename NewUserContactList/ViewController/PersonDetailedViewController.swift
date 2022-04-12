@@ -9,7 +9,8 @@ import UIKit
 
 class PersonDetailedViewController: UITableViewController {
     
-    var persons = [Person]() {
+    var persons = [Person]()
+    {
         didSet {
             DispatchQueue.main.async {
                 self.tableView.reloadData()

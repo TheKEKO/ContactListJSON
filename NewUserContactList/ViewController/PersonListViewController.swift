@@ -11,7 +11,8 @@ class PersonListViewController: UIViewController, UITableViewDelegate, UITableVi
     
     @IBOutlet weak var tableView: UITableView!
     
-    var persons = [Person]() {
+    var persons = [Person]()
+    {
        
         didSet {
             DispatchQueue.main.async {

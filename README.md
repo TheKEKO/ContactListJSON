@@ -7,7 +7,3 @@ Final Application
 Main storyboard
 
 ![2022-05-05_10-17-00](https://user-images.githubusercontent.com/93527566/166878220-efc316ed-aa2c-44e0-9645-ffb976293bcb.png)
-
-Parse JSON
-
-![2022-05-05_10-19-14](https://user-images.githubusercontent.com/93527566/166878706-b1404560-572a-4d56-8680-cb73c2d7fff8.png)

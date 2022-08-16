@@ -13,7 +13,7 @@ class PersonListViewController: UIViewController, UITableViewDelegate, UITableVi
     
     var persons = [Person]()
     {
-       
+        
         didSet {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
